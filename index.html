@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATA - ApaanTuh Archiver</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-950 text-white font-sans overflow-x-hidden selection:bg-cyan-500 selection:text-white cursor-none">
+
+    <div class="custom-cursor hidden md:block"></div>
+    <div class="custom-cursor-dot hidden md:block"></div>
+
+    <nav class="fixed w-full z-50 bg-gray-950/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="hover-trigger text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 hover:scale-105 transition-transform cursor-pointer">
+                ApaanTuh<span class="text-white"> Archiver</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-widest text-gray-400 uppercase">
+                <a href="#features" class="hover-trigger hover:text-cyan-400 transition-colors">Feature</a>
+                <a href="#security" class="hover-trigger hover:text-cyan-400 transition-colors">Security</a>
+                <a href="#download" class="hover-trigger hover:text-cyan-400 transition-colors">Download</a>
+                <a href="contributors.html" class="hover-trigger hover:text-purple-400 transition-colors">Contributor</a>
+            </div>
+            
+            <a href="#download" class="inline-block hover-trigger">
+                <button class="bg-cyan-500 hover:bg-cyan-400 text-gray-950 px-6 py-2 rounded-sm font-bold tracking-wide transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(6,182,212,0.5)]">
+                    GET APP
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <header id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-900/20 rounded-full blur-[120px] -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center">
+            
+            <div class="scroll-anim z-10 text-center md:text-left mt-10 md:mt-0">
+                <h2 class="text-cyan-400 font-bold tracking-[0.2em] mb-4 text-sm uppercase">Next-Gen Archiver APP</h2>
+                
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight min-h-[120px] md:min-h-[150px] relative">
+                    <div id="dynamic-title" class="absolute w-full md:w-auto transition-all duration-700 opacity-100 transform translate-y-0 text-shadow-glow">
+                        <span class="block text-white" id="title-part-1">Secure</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600" id="title-part-2">Your Data</span>
+                    </div>
+                </h1>
+
+                <p class="text-gray-400 text-base md:text-lg mb-10 max-w-md mx-auto md:mx-0">
+                    High-level compression with AES-256 military encryption. Save, lock, and protect your files all in one app
+                </p>
+                
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#download" class="hover-trigger">
+                        <button class="bg-cyan-500 hover:bg-cyan-400 text-gray-950 px-6 py-3 rounded-sm font-bold tracking-widest uppercase transition-all shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+                            Download Now
+                        </button>
+                    </a>
+                    <button onclick="openModal()" class="hover-trigger border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-gray-950 px-6 py-3 rounded-sm font-bold tracking-widest uppercase transition-all shadow-[0_0_15px_rgba(6,182,212,0.2)]">
+                        See APPEARANCE
+                    </button>
+                </div>
+            </div>
+
+            <div class="h-[400px] md:h-[500px] w-full flex justify-center items-center perspective-container z-10" id="hero-3d">
+                <div class="scale-wrapper responsive-scale">
+                    <div class="padlock-wrapper floating">
+                        
+                        <div class="orbit-container orbit-1">
+                            <svg viewBox="0 0 500 500" class="spin-right">
+                                <path id="orbitPath1" fill="none" d="M 250, 250 m -220, 0 a 220,220 0 1,1 440,0 a 220,220 0 1,1 -440,0" />
+                                <text class="binary-text">
+                                    <textPath href="#orbitPath1" startOffset="0" textLength="1382" lengthAdjust="spacingAndGlyphs">
+                                        01011001 11010010 01101011 00101101 10101001 01011001 11010010 01101011 00101101 10101001 01011001 11010010 01101011 00101101 10101001 01011001 11010010 01101011 00101101
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+
+                        <div class="orbit-container orbit-2">
+                            <svg viewBox="0 0 500 500" class="spin-left">
+                                <path id="orbitPath2" fill="none" d="M 250, 250 m -220, 0 a 220,220 0 1,1 440,0 a 220,220 0 1,1 -440,0" />
+                                <text class="binary-text">
+                                    <textPath href="#orbitPath2" startOffset="0" textLength="1382" lengthAdjust="spacingAndGlyphs">
+                                        11010010 01011001 10101001 01101011 00101101 11010010 01011001 10101001 01101011 00101101 11010010 01011001 10101001 01101011 00101101 11010010 01011001 10101001 01101011
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+
+                        <div class="orbit-container orbit-3">
+                            <svg viewBox="0 0 500 500" class="spin-right">
+                                <path id="orbitPath3" fill="none" d="M 250, 250 m -220, 0 a 220,220 0 1,1 440,0 a 220,220 0 1,1 -440,0" />
+                                <text class="binary-text text-purple">
+                                    <textPath href="#orbitPath3" startOffset="0" textLength="1382" lengthAdjust="spacingAndGlyphs">
+                                        10110011 00101100 11010010 01101101 10110011 00101100 11010010 01101101 10110011 00101100 11010010 01101101 10110011 00101100 11010010 01101101 10110011 00101100 11010010
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+
+                        <div class="orbit-container orbit-4">
+                            <svg viewBox="0 0 500 500" class="spin-left">
+                                <path id="orbitPath4" fill="none" d="M 250, 250 m -220, 0 a 220,220 0 1,1 440,0 a 220,220 0 1,1 -440,0" />
+                                <text class="binary-text text-purple">
+                                    <textPath href="#orbitPath4" startOffset="0" textLength="1382" lengthAdjust="spacingAndGlyphs">
+                                        00101100 11010010 10110011 01101101 00101100 11010010 10110011 01101101 00101100 11010010 10110011 01101101 00101100 11010010 10110011 01101101 00101100 11010010 10110011
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+
+                        <div class="padlock-cyber">
+                            <div class="shackle"></div>
+                            <div class="lock-body">
+                                <div class="keyhole"><div class="keyhole-glow"></div></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="py-24 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 scroll-anim">
+                <h2 class="text-cyan-400 font-bold tracking-[0.2em] mb-2 text-sm uppercase">System Features</h2>
+                <h2 class="text-3xl md:text-4xl font-black tracking-wider mb-4">ARSITEKTUR <span class="text-white">SOLID</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Sistem yang dirancang dengan presisi untuk kecepatan kompresi tanpa mengorbankan keamanan data Anda sedikit pun.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-950 p-8 border border-gray-800 hover:border-cyan-500/50 transition-all group scroll-anim hover:-translate-y-2 cursor-pointer hover-trigger">
+                    <div class="w-12 h-12 bg-gray-900 flex items-center justify-center rounded border border-gray-700 mb-6 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all">
+                        <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-cyan-400">Manajemen Arsip</h3>
+                    <p class="text-gray-400 text-sm">Ekstrak dan kompres berbagai format file dengan kecepatan tinggi.</p>
+                </div>
+                <div class="bg-gray-950 p-8 border border-gray-800 hover:border-blue-500/50 transition-all group scroll-anim hover:-translate-y-2 delay-100 cursor-pointer hover-trigger">
+                    <div class="w-12 h-12 bg-gray-900 flex items-center justify-center rounded border border-gray-700 mb-6 group-hover:border-blue-400 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-400">Kompresi Ultra</h3>
+                    <p class="text-gray-400 text-sm">Rasio kompresi yang padat, menghemat ruang penyimpanan di sistem Anda secara signifikan.</p>
+                </div>
+                <div class="bg-gray-950 p-8 border border-gray-800 hover:border-purple-500/50 transition-all group scroll-anim hover:-translate-y-2 delay-200 cursor-pointer hover-trigger">
+                    <div class="w-12 h-12 bg-gray-900 flex items-center justify-center rounded border border-gray-700 mb-6 group-hover:border-purple-400 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-purple-400">Modern GUI</h3>
+                    <p class="text-gray-400 text-sm">Gunakan antarmuka visual yang modern.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="security" class="py-24 bg-gray-950 relative overflow-hidden">
+        <div class="absolute -right-20 top-20 w-96 h-96 bg-blue-900/10 rounded-full blur-[100px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1 scroll-anim hover-trigger">
+                <div class="relative w-full h-[400px] border border-gray-800 bg-gray-900 rounded-lg flex items-center justify-center overflow-hidden group">
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSg2LCAxODIsIDIxMiwgMC4xKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="text-center z-10">
+                        <div class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-blue-600 mb-2 transform group-hover:scale-110 transition-transform duration-500">AES-256</div>
+                        <div class="text-gray-400 tracking-[0.3em] uppercase text-sm">Military Grade Encryption</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-1 md:order-2 scroll-anim">
+                <h2 class="text-cyan-400 font-bold tracking-[0.2em] mb-2 text-sm uppercase">Security Protocols</h2>
+                <h2 class="text-4xl font-black tracking-wider mb-6">DIGITAL <span class="text-cyan-400">FORTRESS</span></h2>
+                <p class="text-gray-400 text-lg mb-6">
+                    ApaanTuh Archiver tidak hanya mengompresi file Anda, tetapi menyegelnya di dalam brankas kriptografi. Kami menggunakan standar enkripsi tertinggi yang tidak dapat ditembus oleh serangan komputasi modern.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-cyan-400 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        <div>
+                            <strong class="text-white block">Zero-Knowledge Architecture</strong>
+                            <span class="text-gray-400 text-sm">Kata sandi Anda tidak pernah meninggalkan perangkat. Anda memegang kendali absolut.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-cyan-400 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                        <div>
+                            <strong class="text-white block">Integritas Hash Checker</strong>
+                            <span class="text-gray-400 text-sm">Validasi otomatis untuk mencegah korupsi atau manipulasi data pada arsip.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="py-32 bg-gray-900 border-t border-cyan-900/30 relative">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-cyan-600/5 blur-[150px] pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center scroll-anim relative z-10">
+            <h2 class="text-4xl sm:text-5xl font-black mb-6 leading-tight">
+                READY TO SECURE <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">THE FUTURE OF YOUR DATA?</span>
+            </h2>
+            <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+                Stop using outdated archivers that compromise your privacy. Switch to <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">ApaanTuh Archiver</span> today.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6 mb-8">
+                <button class="hover-trigger bg-cyan-500 text-gray-950 px-10 py-5 rounded-sm font-black tracking-widest text-lg uppercase hover:bg-cyan-400 hover:-translate-y-1 transition-all shadow-[0_0_40px_rgba(6,182,212,0.6)]">
+                    Download Now
+                </button>
+                <button onclick="openModal()" class="hover-trigger border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-10 py-5 rounded-sm font-black tracking-widest text-lg uppercase transition-all shadow-[0_0_20px_rgba(168,85,247,0.3)]">
+                    SEE APPEARANCE
+                </button>
+            </div>
+
+            <div class="text-sm text-gray-500 font-semibold tracking-wide flex justify-center items-center space-x-6 mt-6">
+                <span>Version 1.0.30 Stable</span>
+                <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                <span>Available for: Windows, macOS, Linux</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 py-8 border-t border-gray-800 text-center text-gray-600 text-sm z-10 relative">
+        <p>Copyright &copy; 2026 ApaanTuh Archiver.</p>
+    </footer>
+
+    <div id="app-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-gray-950/90 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        <div class="relative w-[90%] max-w-5xl bg-gray-900 border border-gray-700 p-2 rounded-lg shadow-[0_0_50px_rgba(6,182,212,0.3)] transform scale-95 transition-transform duration-300" id="modal-content">
+            <button onclick="closeModal()" class="hover-trigger absolute -top-4 -right-4 bg-red-500 hover:bg-red-400 text-white w-10 h-10 rounded-full font-bold text-xl flex items-center justify-center shadow-lg border-2 border-gray-900 z-10 transition-transform hover:scale-110">
+                &times;
+            </button>
+            <div class="overflow-hidden rounded border border-gray-800 bg-black">
+                <img src="image_67c65c.png" alt="Tampilan Aplikasi" class="w-full h-auto object-cover">
+            </div>
+            <div class="p-4 text-center">
+                <h3 class="text-cyan-400 font-bold tracking-widest uppercase">ApaanTuh Archiver Dashboard GUI</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
