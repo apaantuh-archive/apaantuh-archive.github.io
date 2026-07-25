@@ -48,24 +48,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const titleContainer = document.getElementById('dynamic-title');
     const part1 = document.getElementById('title-part-1');
     const part2 = document.getElementById('title-part-2');
+    const part3 = document.getElementById('title-part-3'); // Tambahan part ke-3
 
-	const textData = [
-		{ top: "Secure", bottom: "Your Data" },
-		{ top: "Encrypt", bottom: "Your Secret Files" },
-		{ top: "Protect", bottom: "Your Digital Privacy" },
-		{ top: "Unbreakable", bottom: "AES-256 Shield" }
-	];
-    let currentIndex = 0;
+    if (titleContainer && part1 && part2 && part3) {
+        // Data kata yang akan ditukar (3 baris)
+        // Kamu bisa ganti atau tambah kalimatnya sebebas mungkin di sini!
+        const textData = [
+            { top: "Secure", mid: "Your Data", bot:"" },
+            { top: "Encrypt", mid: "Your", bot: " Secret Files" },
+            { top: "Guard", mid: "Your" , bot: "identity" }
+        ];
+        let currentIndex = 0;
 
-    setInterval(() => {
-        titleContainer.classList.add('title-hidden');
-        setTimeout(() => {
-            currentIndex = (currentIndex + 1) % textData.length;
-            part1.innerText = textData[currentIndex].top;
-            part2.innerText = textData[currentIndex].bottom;
-            titleContainer.classList.remove('title-hidden');
-        }, 700); 
-    }, 5000); 
+        setInterval(() => {
+            // Hilangkan teks (Efek fade/blur out memakai class dari CSS)
+            titleContainer.classList.add('title-hidden');
+            
+            setTimeout(() => {
+                // Ganti indeks ke teks berikutnya
+                currentIndex = (currentIndex + 1) % textData.length;
+                
+                // Ganti isi teksnya
+                part1.innerText = textData[currentIndex].top;
+                part2.innerText = textData[currentIndex].mid;
+                part3.innerText = textData[currentIndex].bot;
+
+                // Munculkan teks kembali
+                titleContainer.classList.remove('title-hidden');
+            }, 700); 
+        }, 5000); // Berganti tiap 5 detik
+    }
 
     // --- 4. ANIMASI SCROLL ---
     const scrollElements = document.querySelectorAll('.scroll-anim');
